@@ -2,42 +2,43 @@
 <html lang="en" prefix="og: https://ogp.me/ns#">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Michalis Smyrlis - Personal Website</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michalis Smyrlis - Personal Website</title>
 
-  <meta property="og:title" content="Michalis Smyrlis - Personal Website" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="./assets/images/logo_1.png" />
-  <meta property="og:url" content="https://smyrlis.github.io" />
-  <meta property="og:description" content="Computer Scientist with a strong background in cybersecurity, specializing in developing robust back-end solutions" />
+    <meta property="og:title" content="Michalis Smyrlis - Personal Website"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="./assets/images/logo_1.png"/>
+    <meta property="og:url" content="https://smyrlis.github.io"/>
+    <meta property="og:description"
+          content="Computer Scientist with a strong background in cybersecurity, specializing in developing robust back-end solutions"/>
 
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+    <!--
+      - favicon
+    -->
+    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
 
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+    <!--
+      - custom css link
+    -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!--
+      - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!--
-    - #MAIN
-  -->
+<!--
+  - #MAIN
+-->
 
-  <main>
+<main>
 
     <!--
       - #SIDEBAR
@@ -45,109 +46,106 @@
 
     <aside class="sidebar" data-sidebar>
 
-      <div class="sidebar-info">
+        <div class="sidebar-info">
 
-        <figure class="avatar-box">
-          <img src="./assets/images/smyrlis.png" alt="Michalis Smyrlis" width="80">
-        </figure>
+            <figure class="avatar-box">
+                <img src="./assets/images/smyrlis.png" alt="Michalis Smyrlis" width="80">
+            </figure>
 
-        <div class="info-content">
-          <h1 class="name" title="Michalis Smyrlis">Michalis Smyrlis</h1>
+            <div class="info-content">
+                <h1 class="name" title="Michalis Smyrlis">Dr. Michalis Smyrlis</h1>
 
-          <p class="title">Computer Scientist</p>
+                <p class="title">Computer Scientist</p>
+            </div>
+
+            <button class="info_more-btn" data-sidebar-btn>
+                <span>Show Contacts</span>
+
+                <ion-icon name="chevron-down"></ion-icon>
+            </button>
+
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+        <div class="sidebar-info_more">
 
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
+            <div class="separator"></div>
 
-      </div>
+            <ul class="contacts-list">
 
-      <div class="sidebar-info_more">
+                <li class="contact-item">
 
-        <div class="separator"></div>
+                    <div class="icon-box">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </div>
 
-        <ul class="contacts-list">
+                    <div class="contact-info">
+                        <p class="contact-title">Employment</p>
 
-          <li class="contact-item">
+                        <a href="https://www.sphynx.ch" target="_blank" class="contact-link">Sphynx Technology</a>
+                    </div>
 
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Employment</p>
-
-              <a href="https://www.sphynx.ch"  target="_blank" class="contact-link">Sphynx Technology</a>
-            </div>
-
-          </li>
+                </li>
 
 
-          <li class="contact-item">
+                <li class="contact-item">
 
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
+                    <div class="icon-box">
+                        <ion-icon name="phone-portrait-outline"></ion-icon>
+                    </div>
 
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
+                    <div class="contact-info">
+                        <p class="contact-title">Email</p>
 
-              <a href="mailto:smyrlis@sphynx.ch"  target="_blank" class="contact-link">smyrlis@sphynx.ch</a>
-            </div>
+                        <a href="mailto:smyrlis@sphynx.ch" target="_blank" class="contact-link">smyrlis@sphynx.ch</a>
+                    </div>
 
-          </li>
-
-      
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-              <address> Crete, Greece, GR</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
+                </li>
 
 
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/michalis-smyrlis-868672129/"  target="_blank" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
+                <li class="contact-item">
 
-          <li class="social-item">
-            <a href="https://twitter.com/MSmyrlis"  target="_blank" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-           <li class="social-item">
-            <a href="https://orcid.org/0000-0001-9527-516X"  target="_blank" class="social-link">
-              <img src="./assets/images/orcid.png
+                    <div class="icon-box">
+                        <ion-icon name="location-outline"></ion-icon>
+                    </div>
+
+                    <div class="contact-info">
+                        <p class="contact-title">Location</p>
+                        <address> Crete, Greece, GR</address>
+                    </div>
+
+                </li>
+
+            </ul>
+
+            <div class="separator"></div>
+
+            <ul class="social-list">
+
+
+                <li class="social-item">
+                    <a href="https://www.linkedin.com/in/michalis-smyrlis-868672129/" target="_blank"
+                       class="social-link">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </li>
+
+                <li class="social-item">
+                    <a href="https://twitter.com/MSmyrlis" target="_blank" class="social-link">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                </li>
+                <li class="social-item">
+                    <a href="https://orcid.org/0000-0001-9527-516X" target="_blank" class="social-link">
+                        <img src="./assets/images/orcid.png
                 " alt="design icon" width="20">
-            </a>
-          </li>
+                    </a>
+                </li>
 
-        </ul>
+            </ul>
 
-      </div>
+        </div>
 
     </aside>
-
-
-
 
 
     <!--
@@ -156,283 +154,302 @@
 
     <div class="main-content">
 
-      <!--
-        - #NAVBAR
-      -->
+        <!--
+          - #NAVBAR
+        -->
 
-      <nav class="navbar">
+        <nav class="navbar">
 
-        <ul class="navbar-list">
+            <ul class="navbar-list">
 
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
+                <li class="navbar-item">
+                    <button class="navbar-link  active" data-nav-link>About</button>
+                </li>
 
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-        </ul>
+                <li class="navbar-item">
+                    <button class="navbar-link" data-nav-link>Resume</button>
+                </li>
+            </ul>
 
-      </nav>
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-           I am a dedicated Computer Scientist with a strong background in cybersecurity, specializing in developing robust back-end solutions. I pursued my passion for technology by studying Computer Science at the <b>University of Crete</b>, where I gained a solid foundation in programming and problem-solving. Currently, I am further expanding my expertise as a PhD candidate at <b>City, University of London</b>, conducting research in the field of cybersecurity. Alongside my academic pursuits, I hold the position of Chief Software Engineer at <b>Sphynx Technology Solutions</b>, where I lead a team in developing cutting-edge software solutions. Previously, I worked as a part-time research assistant and Teaching Assistant at City, University of London, as well as a Software Engineer for <b>EMPELOR GmbH</b> in Switzerland.
-          </p>
-        </section>
+        </nav>
 
 
         <!--
-          - service
+          - #ABOUT
         -->
 
-        <section class="service">
+        <article class="about  active" data-page="about">
 
-          <h3 class="h3 service-title">What i'm doing</h3>
+            <header>
+                <h2 class="h2 article-title">About me</h2>
+            </header>
 
-          <ul class="service-list">
+            <section class="about-text">
+                <p>
+                    I am a dedicated Computer Scientist and Software Engineer with a strong background in cybersecurity,
+                    specializing in
+                    developing robust back-end solutions. I pursued my passion for technology by studying Computer
+                    Science at the <b>University of Crete</b>, where I gained a solid foundation in programming and
+                    problem-solving. I have also completed my PhD in Computer Science at <b>City, University of
+                    London</b>, where I focused on the design and implementation a hybrid approach to cyber risk
+                    evaluation. Currently, I hold the position of Chief Software Engineer at <b>Sphynx Technology
+                    Solutions</b>,
+                    where I lead a team in developing cutting-edge software solutions. Previously, I worked as a
+                    part-time research assistant and Teaching Assistant at City, University of London, as well as a
+                    Software Engineer for <b>EMPELOR GmbH</b> in Switzerland.
+                </p>
+            </section>
 
-            <li class="service-item">
 
-              <div class="service-icon-box">
-                <img src="./assets/images/backend.png
+            <!--
+              - service
+            -->
+
+            <section class="service">
+
+                <h3 class="h3 service-title">What i'm doing</h3>
+
+                <ul class="service-list">
+
+                    <li class="service-item">
+
+                        <div class="service-icon-box">
+                            <img src="./assets/images/backend.png
                 " alt="design icon" width="40">
-              </div>
+                        </div>
 
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Design secure software solutions</h4>
+                        <div class="service-content-box">
+                            <h4 class="h4 service-item-title">Design secure software solutions</h4>
 
-                <p class="service-item-text">
-                  Designing secure software solutions with a focus on robust architecture, encryption, and best practices for data protection.
-                </p>
-              </div>
+                            <p class="service-item-text">
+                                Designing secure software solutions with a focus on robust architecture, encryption, and
+                                best practices for data protection.
+                            </p>
+                        </div>
 
-            </li>
+                    </li>
 
-            <li class="service-item">
+                    <li class="service-item">
 
-              <div class="service-icon-box">
-                <img src="./assets/images/graphic-design.png" alt="development icon" width="40">
-              </div>
+                        <div class="service-icon-box">
+                            <img src="./assets/images/graphic-design.png" alt="development icon" width="40">
+                        </div>
 
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Develop secure software solutions</h4>
+                        <div class="service-content-box">
+                            <h4 class="h4 service-item-title">Develop secure software solutions</h4>
 
-                <p class="service-item-text">
-                  Developing secure software solutions with a meticulous approach to coding, vulnerability testing, and implementing strong security measures for data integrity and user privacy.
-                </p>
-              </div>
+                            <p class="service-item-text">
+                                Developing secure software solutions with a meticulous approach to coding, vulnerability
+                                testing, and implementing strong security measures for data integrity and user privacy.
+                            </p>
+                        </div>
 
-            </li>
-            <li class="service-item">
+                    </li>
+                    <li class="service-item">
 
-                <div class="service-icon-box">
-                  <img src="./assets/images/team.png" alt="team lead icon" width="40">
-                </div>
+                        <div class="service-icon-box">
+                            <img src="./assets/images/team.png" alt="team lead icon" width="40">
+                        </div>
 
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Team lead</h4>
+                        <div class="service-content-box">
+                            <h4 class="h4 service-item-title">Team lead</h4>
 
-                  <p class="service-item-text">
-                    Ensure seamless collaboration, technical excellence, and successful product delivery.
-                  </p>
-                </div>
+                            <p class="service-item-text">
+                                Ensure seamless collaboration, technical excellence, and successful product delivery.
+                            </p>
+                        </div>
 
-              </li>
-            <li class="service-item">
+                    </li>
+                    <li class="service-item">
 
-              <div class="service-icon-box">
-                <img src="./assets/images/project-manager.png" alt="project Management icon" width="40">
-              </div>
+                        <div class="service-icon-box">
+                            <img src="./assets/images/project-manager.png" alt="project Management icon" width="40">
+                        </div>
 
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">EU Project Management</h4>
+                        <div class="service-content-box">
+                            <h4 class="h4 service-item-title">EU Project Management</h4>
 
-                <p class="service-item-text">
-                  Efficiently managing EU projects with expertise in coordination, funding, and compliance.
-                </p>
-              </div>
+                            <p class="service-item-text">
+                                Efficiently managing EU projects with expertise in coordination, funding, and
+                                compliance.
+                            </p>
+                        </div>
 
-            </li>
+                    </li>
 
-          </ul>
-        </section>
-      </article>
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">University of Crete</h4>
-
-              <span>2012 — 2016</span>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">City, University of London</h4>
-
-              <span>2017 — 2023</span>
-
-              <p class="timeline-text">
-                Ph.D in Cyber Security
-              </p>
-              <p class="timeline-text">
-                <ul>
-                  <li>Thesis: A hybrid approach to cyber risk evaluation</li>
-                  <li>Supervised by Prof. George Spanoudakis and Dr.Christos Kloukinas</li>
                 </ul>
-                
-              </p>
+            </section>
+        </article>
+        <!--
+          - #RESUME
+        -->
 
-            </li>
-          </ol>
+        <article class="resume" data-page="resume">
 
-        </section>
+            <header>
+                <h2 class="h2 article-title">Resume</h2>
+            </header>
 
-        <section class="timeline">
+            <section class="timeline">
 
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="code-working-outline"></ion-icon>
-            </div>
+                <div class="title-wrapper">
+                    <div class="icon-box">
+                        <ion-icon name="book-outline"></ion-icon>
+                    </div>
 
-            <h3 class="h3">Experience</h3>
-          </div>
+                    <h3 class="h3">Education</h3>
+                </div>
 
-          <ol class="timeline-list">
+                <ol class="timeline-list">
 
-            <li class="timeline-item">
+                    <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Chief Software Engineer</h4>
-              <h4 class="h4 timeline-item-title">Sphynx Technology Solutions AG</h4>
-              <span>Apr 2021 — Present</span>
+                        <h4 class="h4 timeline-item-title">University of Crete</h4>
 
-              <p class="timeline-text">
-                Provide technical leadership, guiding the overall software architecture and design decisions, and ensuring the successful delivery of high-quality software products. Collaborate closely with cross-functional teams, including product managers, software developers, and quality assurance professionals, to establish development methodologies, set coding standards, and define best practices. Recruiting and mentoring talented software engineers, conducting code reviews, and driving continuous improvement initiatives to enhance the efficiency and effectiveness of the software development lifecycle. 
-                Responsible for multiple SPHYNX's EU-funded projects.
-              </p>
+                        <span>2012 — 2016</span>
 
-            </li>
+                    </li>
 
-            <li class="timeline-item">
+                    <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Senior Software Engineer</h4>
-              <h4 class="h4 timeline-item-title">Sphynx Technology Solutions AG</h4>
-              <span>2019 — Apr 2021</span>
+                        <h4 class="h4 timeline-item-title">City, University of London</h4>
 
-              <p class="timeline-text">
-                Plan, develop, implement, and maintain software tools for SPHYNX. Design and implement scalable software architectures for complex systems. Collaborate with cross-functional teams to gather requirements and define technical specifications. Resolve technical issues and perform debugging and troubleshooting.
-              </p>
+                        <span>2017 — 2023</span>
 
-            </li>
-            <li class="timeline-item">
+                        <p class="timeline-text">
+                            Ph.D in Cyber Security
+                        </p>
+                        <p class="timeline-text">
+                        <ul>
+                            <li>Thesis: A hybrid approach to cyber risk evaluation</li>
+                            <li>Supervised by Prof. George Spanoudakis and Dr.Christos Kloukinas</li>
+                        </ul>
 
-              <h4 class="h4 timeline-item-title">Software Engineer</h4>
-              <h4 class="h4 timeline-item-title">Empelor GMBH</h4>
-              <span>2016 — 2019</span>
+                        </p>
 
-              <p class="timeline-text">
-                Performed research and development tasks for the EVOTION H2020 project.
-              </p>
+                    </li>
+                </ol>
 
-            </li>
-            <li class="timeline-item">
+            </section>
 
-              <h4 class="h4 timeline-item-title">Graduate Teaching Assistant</h4>
-              <h4 class="h4 timeline-item-title">City, University of London</h4>
-              <span>2018 — 2019</span>
+            <section class="timeline">
 
-              <p class="timeline-text">
-                  Courses: "Security Audit and Certification", "Systems Architecture".
-              </p>
+                <div class="title-wrapper">
+                    <div class="icon-box">
+                        <ion-icon name="code-working-outline"></ion-icon>
+                    </div>
 
-            </li>
-            <li class="timeline-item">
+                    <h3 class="h3">Experience</h3>
+                </div>
 
-              <h4 class="h4 timeline-item-title">Research Assistant</h4>
-              <h4 class="h4 timeline-item-title">City, University of London</h4>
-              <span>2016 — 2019</span>
+                <ol class="timeline-list">
 
-              <p class="timeline-text">
-                Part of the Centre of Adaptive Computing Systems (CeNACS) team. Research and development tasks for multiple EU-funded projects, such as TOREADOR, and CyberSURE.
-              </p>
+                    <li class="timeline-item">
 
-            </li>
-            <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">Chief Software Engineer</h4>
+                        <h4 class="h4 timeline-item-title">Sphynx Technology Solutions AG</h4>
+                        <span>Apr 2021 — Present</span>
 
-              <h4 class="h4 timeline-item-title">Graduate Software Engineer</h4>
-              <h4 class="h4 timeline-item-title">University General Hospital of Heraklion "PAGNI"</h4>
-              <span>May 2016 - Oct 2016</span>
+                        <p class="timeline-text">
+                            Provide technical leadership, guiding the overall software architecture and design
+                            decisions, and ensuring the successful delivery of high-quality software products.
+                            Collaborate closely with cross-functional teams, including product managers, software
+                            developers, and quality assurance professionals, to establish development methodologies, set
+                            coding standards, and define best practices. Recruiting and mentoring talented software
+                            engineers, conducting code reviews, and driving continuous improvement initiatives to
+                            enhance the efficiency and effectiveness of the software development lifecycle.
+                            Responsible for multiple SPHYNX's EU-funded projects.
+                        </p>
 
-              <p class="timeline-text">
-                Designed and implemented the official android application for the University General Hospital of Heraklion "PAGNI". (Availabe at: https://play.google.com/store/apps/details?id=com.mikesm.pagniapp)
-              </p>
+                    </li>
 
-            </li>
-          </ol>
+                    <li class="timeline-item">
 
-        </section>
+                        <h4 class="h4 timeline-item-title">Senior Software Engineer</h4>
+                        <h4 class="h4 timeline-item-title">Sphynx Technology Solutions AG</h4>
+                        <span>2019 — Apr 2021</span>
 
-  
-      </article>
-      <!--
-        - #CONTACT
-      -->
+                        <p class="timeline-text">
+                            Plan, develop, implement, and maintain software tools for SPHYNX. Design and implement
+                            scalable software architectures for complex systems. Collaborate with cross-functional teams
+                            to gather requirements and define technical specifications. Resolve technical issues and
+                            perform debugging and troubleshooting.
+                        </p>
+
+                    </li>
+                    <li class="timeline-item">
+
+                        <h4 class="h4 timeline-item-title">Software Engineer</h4>
+                        <h4 class="h4 timeline-item-title">Empelor GMBH</h4>
+                        <span>2016 — 2019</span>
+
+                        <p class="timeline-text">
+                            Performed research and development tasks for the EVOTION H2020 project.
+                        </p>
+
+                    </li>
+                    <li class="timeline-item">
+
+                        <h4 class="h4 timeline-item-title">Graduate Teaching Assistant</h4>
+                        <h4 class="h4 timeline-item-title">City, University of London</h4>
+                        <span>2018 — 2019</span>
+
+                        <p class="timeline-text">
+                            Courses: "Security Audit and Certification", "Systems Architecture".
+                        </p>
+
+                    </li>
+                    <li class="timeline-item">
+
+                        <h4 class="h4 timeline-item-title">Research Assistant</h4>
+                        <h4 class="h4 timeline-item-title">City, University of London</h4>
+                        <span>2016 — 2019</span>
+
+                        <p class="timeline-text">
+                            Part of the Centre of Adaptive Computing Systems (CeNACS) team. Research and development
+                            tasks for multiple EU-funded projects, such as TOREADOR, and CyberSURE.
+                        </p>
+
+                    </li>
+                    <li class="timeline-item">
+
+                        <h4 class="h4 timeline-item-title">Graduate Software Engineer</h4>
+                        <h4 class="h4 timeline-item-title">University General Hospital of Heraklion "PAGNI"</h4>
+                        <span>May 2016 - Oct 2016</span>
+
+                        <p class="timeline-text">
+                            Designed and implemented the official android application for the University General
+                            Hospital of Heraklion "PAGNI". (Availabe at:
+                            https://play.google.com/store/apps/details?id=com.mikesm.pagniapp)
+                        </p>
+
+                    </li>
+                </ol>
+
+            </section>
+
+
+        </article>
+        <!--
+          - #CONTACT
+        -->
 
 
     </div>
 
-  </main>
+</main>
 
 
+<!--
+  - custom js link
+-->
+<script src="./assets/js/script.js"></script>
 
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<!--
+  - ionicon link
+-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 
