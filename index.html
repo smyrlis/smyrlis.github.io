@@ -3,148 +3,131 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michalis Smyrlis - Personal Website</title>
+    <meta name="description" data-i18n-meta="desc"
+          content="I'm Michalis Smyrlis — CTO at Sphynx and cybersecurity researcher. I architect secure software, lead engineering teams, and coordinate EU-funded research projects.">
+    <meta name="theme-color" content="#0b0d0c" data-theme-color-dark>
 
-    <meta property="og:title" content="Michalis Smyrlis - Personal Website"/>
+    <title data-i18n-meta="title">Michalis Smyrlis — CTO & Cybersecurity Researcher</title>
+
+    <link rel="canonical" href="https://smyrlis.github.io/">
+    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+
+    <meta property="og:title" content="Michalis Smyrlis — CTO & Cybersecurity Researcher"/>
     <meta property="og:type" content="website"/>
     <meta property="og:image" content="./assets/images/logo_1.png"/>
     <meta property="og:url" content="https://smyrlis.github.io"/>
     <meta property="og:description"
-          content="Computer Scientist with a strong background in cybersecurity, specializing in developing robust back-end solutions"/>
+          content="CTO at Sphynx. Cybersecurity researcher. Architecting secure software from research to production."/>
 
-    <!--
-      - favicon
-    -->
-    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+    <!-- Prevent theme flash: set data-theme before CSS loads -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
 
-    <!--
-      - custom css link
-    -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-
-    <!--
-      - google font link
-    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
-    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@1,14..144,400;1,14..144,500&display=swap">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
 
-<!--
-  - #MAIN
--->
+<div class="grain" aria-hidden="true"></div>
 
 <main>
 
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
+    <!-- #SIDEBAR -->
+    <aside class="sidebar" data-sidebar aria-label="Profile">
 
         <div class="sidebar-info">
 
             <figure class="avatar-box">
-                <img src="./assets/images/smyrlis.png" alt="Michalis Smyrlis" width="80">
+                <img src="./assets/images/smyrlis.png" alt="Portrait of Michalis Smyrlis"
+                     width="80" height="80" loading="eager">
+                <span class="avatar-dot" aria-hidden="true"></span>
             </figure>
 
             <div class="info-content">
-                <h1 class="name" title="Michalis Smyrlis">Dr. <br> Michalis Smyrlis</h1>
+                <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="sidebar.status">Currently at Sphynx</span></p>
+                <h1 class="name">Michalis Smyrlis<span class="name-dot">.</span></h1>
+                <p class="title" data-i18n="sidebar.title">CTO @ Sphynx · Cybersecurity researcher</p>
             </div>
 
-            <button class="info_more-btn" data-sidebar-btn>
-                <span>Show Contacts</span>
-
-                <ion-icon name="chevron-down"></ion-icon>
+            <button class="info_more-btn" data-sidebar-btn type="button"
+                    aria-expanded="false" aria-controls="sidebar-more">
+                <span data-i18n="sidebar.btn">Contact</span>
+                <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
             </button>
 
         </div>
 
-        <div class="sidebar-info_more">
+        <div class="sidebar-info_more" id="sidebar-more">
 
-            <div class="separator"></div>
+            <div class="separator" role="presentation"></div>
 
             <ul class="contacts-list">
 
                 <li class="contact-item">
-
-                    <div class="icon-box">
-                        <ion-icon name="code-working-outline"></ion-icon>
+                    <div class="icon-box" aria-hidden="true">
+                        <ion-icon name="briefcase-outline"></ion-icon>
                     </div>
-
                     <div class="contact-info">
-                        <p class="contact-title">Employment</p>
-                        <a href="https://www.sphynx.ch" target="_blank" class="contact-link">Sphynx</a>
+                        <p class="contact-title" data-i18n="contact.employment">Employment</p>
+                        <a href="https://www.sphynx.ch" target="_blank" rel="noopener"
+                           class="contact-link">Sphynx</a>
                     </div>
-
                 </li>
-
 
                 <li class="contact-item">
-
-                    <div class="icon-box">
+                    <div class="icon-box" aria-hidden="true">
                         <ion-icon name="mail-outline"></ion-icon>
                     </div>
-
                     <div class="contact-info">
-                        <p class="contact-title">Work Email</p>
-
-                        <a href="mailto:smyrlis@sphynx.ch" target="_blank" class="contact-link">smyrlis@sphynx.ch</a>
+                        <p class="contact-title" data-i18n="contact.work">Work</p>
+                        <a href="mailto:smyrlis@sphynx.ch" class="contact-link">smyrlis@sphynx.ch</a>
                     </div>
-
                 </li>
+
                 <li class="contact-item">
-
-                    <div class="icon-box">
-                        <ion-icon name="mail-outline"></ion-icon>
+                    <div class="icon-box" aria-hidden="true">
+                        <ion-icon name="at-outline"></ion-icon>
                     </div>
-
                     <div class="contact-info">
-                        <p class="contact-title">Personal Email</p>
-
-                        <a href="mailto:smyrlis@outlook.com" target="_blank" class="contact-link">smyrlis@outlook.com</a>
+                        <p class="contact-title" data-i18n="contact.personal">Personal</p>
+                        <a href="mailto:smyrlis@outlook.com" class="contact-link">smyrlis@outlook.com</a>
                     </div>
-
                 </li>
-
 
             </ul>
 
-            <div class="separator"></div>
+            <div class="separator" role="presentation"></div>
 
-            <ul class="social-list">
-
-
-                <li class="social-item">
+            <ul class="social-list" aria-label="Social profiles">
+                <li>
                     <a href="https://www.linkedin.com/in/michalis-smyrlis-868672129/" target="_blank"
-                       class="social-link">
-                        <ion-icon name="logo-linkedin"></ion-icon>
+                       rel="noopener" class="social-link" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"/>
+                        </svg>
                     </a>
                 </li>
-
-                <li class="social-item">
-                    <a href="https://ioc.exchange/@smyrlis" target="_blank" class="social-link">
-                        <ion-icon name="logo-mastodon"></ion-icon>
+                <li>
+                    <a href="https://orcid.org/0000-0001-9527-516X" target="_blank" rel="noopener"
+                       class="social-link" aria-label="ORCID">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                            <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947 0 .525-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/>
+                        </svg>
                     </a>
                 </li>
-                 <li class="social-item">
-                    <a href="https://github.com/mikesmirlis" target="_blank" class="social-link">
-                        <ion-icon name="logo-github"></ion-icon>
-                    </a>
-                </li>
-                <li class="social-item">
-                    <a href="https://orcid.org/0000-0001-9527-516X" target="_blank" class="social-link">
-                        <img src="./assets/images/orcid.png
-                " alt="design icon" width="20">
-                    </a>
-                </li>
-
             </ul>
 
         </div>
@@ -152,320 +135,349 @@
     </aside>
 
 
-    <!--
-      - #main-content
-    -->
-
+    <!-- #MAIN CONTENT -->
     <div class="main-content">
 
-        <!--
-          - #NAVBAR
-        -->
+        <!-- #TOOLBAR -->
+        <div class="toolbar">
+            <nav class="navbar" aria-label="Primary">
+                <ul class="navbar-list" role="tablist">
+                    <li role="presentation">
+                        <button class="navbar-link active" data-nav-link data-key="about" role="tab"
+                                id="tab-about" aria-selected="true" aria-controls="panel-about"
+                                tabindex="0" type="button" data-i18n="nav.about">About</button>
+                    </li>
+                    <li role="presentation">
+                        <button class="navbar-link" data-nav-link data-key="resume" role="tab"
+                                id="tab-resume" aria-selected="false" aria-controls="panel-resume"
+                                tabindex="-1" type="button" data-i18n="nav.resume">Resume</button>
+                    </li>
+                </ul>
+            </nav>
 
-        <nav class="navbar">
+            <div class="controls" role="group" aria-label="Site preferences">
+                <button class="ctrl-btn" data-theme-toggle type="button" aria-label="Switch theme">
+                    <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+                    </svg>
+                    <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="ctrl-btn ctrl-lang" data-lang-toggle type="button"
+                        aria-label="Switch language">
+                    <span class="ctrl-lang-label">EL</span>
+                </button>
+            </div>
+        </div>
 
-            <ul class="navbar-list">
 
-                <li class="navbar-item">
-                    <button class="navbar-link  active" data-nav-link>About</button>
-                </li>
+        <!-- #ABOUT -->
+        <article class="about active" data-page="about" id="panel-about"
+                 role="tabpanel" aria-labelledby="tab-about">
 
-                <li class="navbar-item">
-                    <button class="navbar-link" data-nav-link>Resume</button>
-                </li>
-            </ul>
-
-        </nav>
-
-
-        <!--
-          - #ABOUT
-        -->
-
-        <article class="about  active" data-page="about">
-
-            <header>
-                <h2 class="h2 article-title">About me</h2>
+            <header class="hero">
+                <p class="eyebrow eyebrow--dark" data-i18n="about.eyebrow">About</p>
+                <h2 class="hero-title" data-i18n-html="about.title">
+                    Hi — I help teams build <em>secure</em> software,<br>
+                    from research to production.
+                </h2>
+                <p class="hero-kicker" data-i18n="about.kicker">
+                    CTO at Sphynx. Scientific Collaborator at the European University of Cyprus.
+                    Contributor and technical coordinator on 30+ EU cybersecurity research projects.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-value">30+</span>
+                        <span class="stat-label" data-i18n="stats.projects">EU projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">10+</span>
+                        <span class="stat-label" data-i18n="stats.years">Years in cybersec</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">PhD</span>
+                        <span class="stat-label" data-i18n="stats.phd">City, University of London</span>
+                    </div>
+                </div>
             </header>
 
-            <section class="about-text">
-                <p>
-                    Dr. Michalis Smyrlis possesses extensive experience and expertise in cybersecurity, with a particular focus on software design and development. He holds a BSc from <b>the Department of Computer Science at the University of Crete </b> and a <b> PhD in Computer Science with a specialization in Cybersecurity from City, University of London </b>. As part of his doctoral research, he developed and implemented an innovative hybrid approach for risk assessment in cyberspace systems. 
-                    With a strong background in applied research, Dr. Smyrlis has contributed to more than <b>30 European research projects</b>, many of which he coordinated from a technical standpoint. He currently serves as the <b>Chief Technology Officer (CTO) at Sphynx</b>, where he leads the company’s technological vision and strategic direction. In this role, he is responsible for architecting and guiding the development of advanced cybersecurity solutions, ensuring software quality, and aligning engineering initiatives with business goals. He oversees the full product lifecycle—from design and implementation to delivery—while fostering innovation and maintaining high standards in software security and performance.
-                    In addition to his industry role, Dr. Smyrlis is a <b>Scientific Collaborator</b> at the European University of Cyprus. There, he teaches courses and supervises postgraduate research within the Master’s programme in Cybersecurity.
+            <section class="about-text prose">
+                <p data-i18n-html="about.p1">
+                    I'm a cybersecurity researcher and software engineer. I hold a BSc from the
+                    <strong>University of Crete</strong> and a PhD from <strong>City, University of
+                    London</strong>, where my doctoral research introduced a hybrid approach to
+                    cyber risk evaluation.
+                </p>
+                <p data-i18n-html="about.p2">
+                    As <strong>CTO at Sphynx</strong>, I lead the company's technical direction —
+                    architecting secure software, setting engineering standards, and shipping
+                    cybersecurity products from design to delivery. I've contributed to
+                    <strong>30+ European research projects</strong>, many of them as technical
+                    coordinator.
+                </p>
+                <p data-i18n-html="about.p3">
+                    I'm also a <strong>Scientific Collaborator</strong> at the European University
+                    of Cyprus, where I teach and supervise postgraduate research in the MSc
+                    Cybersecurity programme.
                 </p>
             </section>
 
+            <section class="service">
 
-            <!--
-              - service
-            -->
+                <div class="section-heading">
+                    <p class="eyebrow eyebrow--dark" data-i18n="focus.eyebrow">Focus areas</p>
+                    <h3 class="h3 service-title" data-i18n="focus.title">What I do</h3>
+                </div>
 
-        <section class="service">
+                <ul class="service-list bento">
 
-  <h3 class="h3 service-title">What I'm Doing</h3>
+                    <li class="service-item bento-item bento-item--wide">
+                        <div class="service-icon-box" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+                                <path d="M12 8v4"/>
+                                <path d="M12 16h.01"/>
+                            </svg>
+                        </div>
+                        <div class="service-content-box">
+                            <h4 class="h4 service-item-title" data-i18n="focus.1.title">Cyber risk assessment</h4>
+                            <p class="service-item-text" data-i18n-html="focus.1.text">
+                                My PhD introduced a <em>hybrid</em> approach to cyber risk evaluation. I
+                                keep extending it in practice — modelling threats, quantifying exposure,
+                                and turning risk into concrete engineering decisions.
+                            </p>
+                        </div>
+                    </li>
 
-  <ul class="service-list">
+                    <li class="service-item bento-item">
+                        <div class="service-icon-box" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/>
+                                <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/>
+                                <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/>
+                            </svg>
+                        </div>
+                        <div class="service-content-box">
+                            <h4 class="h4 service-item-title" data-i18n="focus.2.title">Secure software architecture</h4>
+                            <p class="service-item-text" data-i18n-html="focus.2.text">
+                                At Sphynx I design systems security-first — defining architecture,
+                                enforcing security-by-design, and keeping the codebase scalable and
+                                maintainable.
+                            </p>
+                        </div>
+                    </li>
 
-    <li class="service-item">
-      <div class="service-icon-box">
-        <img src="./assets/images/backend.png" alt="design icon" width="40">
-      </div>
-      <div class="service-content-box">
-        <h4 class="h4 service-item-title">Architecting Secure Software Systems</h4>
-        <p class="service-item-text">
-          At Sphynx, I lead the design and development of secure, high-performance software solutions. I define system architecture, enforce security-by-design principles, and ensure scalable and maintainable code through industry best practices.
-        </p>
-      </div>
-    </li>
+                    <li class="service-item bento-item">
+                        <div class="service-icon-box" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/>
+                                <path d="M22 10v6"/>
+                                <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/>
+                            </svg>
+                        </div>
+                        <div class="service-content-box">
+                            <h4 class="h4 service-item-title" data-i18n="focus.3.title">Teaching &amp; thesis supervision</h4>
+                            <p class="service-item-text" data-i18n-html="focus.3.text">
+                                I teach cybersecurity courses at MSc level and supervise Master's theses
+                                at the European University of Cyprus.
+                            </p>
+                        </div>
+                    </li>
 
-    <li class="service-item">
-      <div class="service-icon-box">
-        <img src="./assets/images/analysis.png" alt="research icon" width="40">
-      </div>
-      <div class="service-content-box">
-        <h4 class="h4 service-item-title">Cybersecurity Research & Innovation</h4>
-        <p class="service-item-text">
-            Involvement in advanced research activities focused on cybersecurity, including risk assessment methodologies, secure software engineering, and the development of innovative digital defense strategies.
-        </p>
-      </div>
-    </li>
+                    <li class="service-item bento-item bento-item--wide">
+                        <div class="service-icon-box" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 2a14.5 14.5 0 0 0 0 20"/>
+                                <path d="M12 2a14.5 14.5 0 0 1 0 20"/>
+                                <path d="M2 12h20"/>
+                            </svg>
+                        </div>
+                        <div class="service-content-box">
+                            <h4 class="h4 service-item-title" data-i18n="focus.4.title">EU research &amp; innovation</h4>
+                            <p class="service-item-text" data-i18n-html="focus.4.text">
+                                I've contributed to <strong>30+ EU-funded cybersecurity projects</strong>,
+                                many as technical coordinator — translating research outputs into
+                                production-ready systems.
+                            </p>
+                        </div>
+                    </li>
 
-    <li class="service-item">
-      <div class="service-icon-box">
-        <img src="./assets/images/team.png" alt="team lead icon" width="40">
-      </div>
-      <div class="service-content-box">
-        <h4 class="h4 service-item-title">Technical Leadership & Mentorship</h4>
-        <p class="service-item-text">
-            Overseeing cross-functional engineering teams to ensure technical excellence and timely delivery of cybersecurity solutions. Providing mentorship to junior developers and postgraduate students in secure systems design and implementation.
-        </p>
-      </div>
-    </li>
+                </ul>
+            </section>
 
-    <li class="service-item">
-      <div class="service-icon-box">
-        <img src="./assets/images/project-manager.png" alt="project management icon" width="40">
-      </div>
-      <div class="service-content-box">
-        <h4 class="h4 service-item-title">EU Project Coordination & Teaching</h4>
-        <p class="service-item-text">
-            Coordinating technical activities within EU-funded cybersecurity projects and contributing to academic instruction at the European University of Cyprus. Responsibilities include course delivery and supervision of Master's theses in cybersecurity.
-        </p>
-      </div>
-    </li>
-
-  </ul>
-</section>
         </article>
-        <!--
-          - #RESUME
-        -->
 
-        <article class="resume" data-page="resume">
 
-            <header>
-                <h2 class="h2 article-title">Resume</h2>
+        <!-- #RESUME -->
+        <article class="resume" data-page="resume" id="panel-resume"
+                 role="tabpanel" aria-labelledby="tab-resume" hidden>
+
+            <header class="hero">
+                <p class="eyebrow eyebrow--dark" data-i18n="resume.eyebrow">Resume</p>
+                <h2 class="hero-title" data-i18n-html="resume.title">
+                    Ten years in cybersecurity —<br>
+                    research, engineering, and teaching.
+                </h2>
+                <div class="cv-download">
+                    <a href="./assets/cv/Michalis_Smyrlis_CV.pdf" download class="btn btn-primary">
+                        <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                             stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <span data-i18n="btn.download">Download CV</span>
+                    </a>
+                    <a href="mailto:smyrlis@sphynx.ch" class="btn btn-ghost">
+                        <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                        <span data-i18n="btn.contact">Get in touch</span>
+                    </a>
+                </div>
             </header>
-            <div id="wrap">
-                <a href="./assets/cv/Michalis_Smyrlis_CV.pdf" download class="btn-slide2" >
-                  <span class="circle2"><i class="fa fa-download"></i></span>
-                  <span class="title2">Download</span>
-                  <span class="title-hover2">Click here</span>
-                </a>
-            </div>
+
             <section class="timeline">
 
-                <div class="title-wrapper">
-                    <div class="icon-box">
-                        <ion-icon name="book-outline"></ion-icon>
-                    </div>
-
-                    <h3 class="h3">Education</h3>
+                <div class="section-heading">
+                    <p class="eyebrow eyebrow--dark" data-i18n="edu.eyebrow">01 — Education</p>
                 </div>
 
                 <ol class="timeline-list">
 
                     <li class="timeline-item">
-
-                        <h4 class="h4 timeline-item-title">University of Crete</h4>
-
-                        <span>2012 — 2016</span>
-                        <p class="timeline-text">
-                            BSc in Computer Science
+                        <span class="timeline-date">2017 — 2023</span>
+                        <h4 class="h4 timeline-item-title" data-i18n="edu.1.title">PhD, Cybersecurity</h4>
+                        <p class="timeline-company" data-i18n="edu.1.company">City, University of London</p>
+                        <p class="timeline-text" data-i18n-html="edu.1.text">
+                            Thesis: <em>A hybrid approach to cyber risk evaluation.</em>
+                            Supervised by Prof. George Spanoudakis and Dr. Christos Kloukinas.
                         </p>
-                        <p class="timeline-text">
-                        <ul>
-                            <li>Thesis: Evaluation and extension of question-answering systems over medical texts</li>
-                        </ul>
-
+                        <p class="timeline-link">
+                            <a href="https://openaccess.city.ac.uk/id/eprint/31479/" target="_blank"
+                               rel="noopener" data-i18n="edu.1.link">Read the thesis →</a>
                         </p>
                     </li>
 
                     <li class="timeline-item">
-
-                        <h4 class="h4 timeline-item-title">School of Mathematics, Computer Science and Engineering
-                            <br> City, University of London</h4>
-
-                        <span>2017 — 2023</span>
-
-                        <p class="timeline-text">
-                            Ph.D in Cybersecurity
+                        <span class="timeline-date">2012 — 2016</span>
+                        <h4 class="h4 timeline-item-title" data-i18n="edu.2.title">BSc, Computer Science</h4>
+                        <p class="timeline-company" data-i18n="edu.2.company">University of Crete</p>
+                        <p class="timeline-text" data-i18n-html="edu.2.text">
+                            Thesis: <em>Evaluation and extension of question-answering systems over medical texts.</em>
                         </p>
-                        <p class="timeline-text">
-                        <ul>
-                            <li>Thesis: A hybrid approach to cyber risk evaluation.</li>
-                            <li>Available here: <a href="https://openaccess.city.ac.uk/id/eprint/31479/">CITY, University of London's Library</a> </li>
-                            <li>Supervised by Prof. George Spanoudakis and Dr. Christos Kloukinas
-                        </ul>
-
-                        </p>
-
                     </li>
+
                 </ol>
 
             </section>
 
             <section class="timeline">
 
-
-                <div class="title-wrapper">
-                    <div class="icon-box">
-                        <ion-icon name="code-working-outline"></ion-icon>
-                    </div>
-
-                    <h3 class="h3">Experience</h3>
+                <div class="section-heading">
+                    <p class="eyebrow eyebrow--dark" data-i18n="exp.eyebrow">02 — Experience</p>
                 </div>
 
                 <ol class="timeline-list">
+
                     <li class="timeline-item">
-
-                        <h4 class="h4 timeline-item-title">Chief Technology Officer (CTO)</h4>
-                        <h4 class="h4 timeline-item-title">Sphynx</h4>
-                        <span>July 2025 — Present</span>
-
-                        <p class="timeline-text">
-                             Leading the company’s technological direction with a focus on secure software architecture, innovation, and product excellence. Responsible for defining and overseeing software architecture, design standards, and development methodologies across all technical teams. 
-                             Actively involved in team building, recruiting, and mentoring engineers, while conducting code reviews and promoting engineering best practices. 
-                             Ensuring cross-functional alignment between product, development, and QA teams to deliver high-quality, scalable cybersecurity solutions. Also responsible for the technical coordination and execution of multiple EU-funded cybersecurity research and innovation projects under SPHYNX.
+                        <span class="timeline-date">Jul 2025 — Present</span>
+                        <h4 class="h4 timeline-item-title" data-i18n="exp.1.title">Chief Technology Officer</h4>
+                        <p class="timeline-company">Sphynx</p>
+                        <p class="timeline-text" data-i18n-html="exp.1.text">
+                            I lead Sphynx's technical direction — secure software architecture,
+                            engineering standards, and product delivery. I recruit and mentor engineers,
+                            run code reviews, and serve as technical lead across multiple EU-funded
+                            cybersecurity R&amp;I projects.
                         </p>
                     </li>
+
                     <li class="timeline-item">
-
-                        <h4 class="h4 timeline-item-title">Chief Software Engineer</h4>
-                        <h4 class="h4 timeline-item-title">Sphynx</h4>
-                        <span>Apr 2021 — June 2025</span>
-
-                        <p class="timeline-text">
-                            Provide technical leadership, guiding the overall software architecture and design
-                            decisions, and ensuring the successful delivery of high-quality software products.
-                            Collaborate closely with cross-functional teams, including product managers, software
-                            developers, and quality assurance professionals, to establish development methodologies, set
-                            coding standards, and define best practices. Recruiting and mentoring talented software
-                            engineers, conducting code reviews, and driving continuous improvement initiatives to
-                            enhance the efficiency and effectiveness of the software development lifecycle.
-                            Responsible for multiple SPHYNX's EU-funded projects.
+                        <span class="timeline-date">Apr 2021 — Jun 2025</span>
+                        <h4 class="h4 timeline-item-title" data-i18n="exp.2.title">Chief Software Engineer</h4>
+                        <p class="timeline-company">Sphynx</p>
+                        <p class="timeline-text" data-i18n-html="exp.2.text">
+                            Owned software architecture and delivery for Sphynx's products. Set
+                            development methodologies and coding standards, recruited and mentored
+                            engineers, and led multiple EU-funded projects.
                         </p>
-
                     </li>
+
                     <li class="timeline-item">
-
-                        <h4 class="h4 timeline-item-title">Scientific Collaborator</h4>
-                        <h4 class="h4 timeline-item-title">European University Cyprus</h4>
-                        <span>Oct 2023 - Present</span>
-
-                        <p class="timeline-text">
-                           Instructor for the Ethical Hacking and Penetration Testing Course (MSc Level), Master thesis supervision
+                        <span class="timeline-date">Oct 2023 — Present</span>
+                        <h4 class="h4 timeline-item-title" data-i18n="exp.3.title">Scientific Collaborator</h4>
+                        <p class="timeline-company" data-i18n="exp.3.company">European University Cyprus</p>
+                        <p class="timeline-text" data-i18n-html="exp.3.text">
+                            Instructor for cybersecurity courses and supervisor for MSc theses.
                         </p>
-
                     </li>
+
                     <li class="timeline-item">
-
-                        <h4 class="h4 timeline-item-title">Senior Software Engineer</h4>
-                        <h4 class="h4 timeline-item-title">Sphynx Technology Solutions AG</h4>
-                        <span>2019 — Apr 2021</span>
-
-                        <p class="timeline-text">
-                            Plan, develop, implement, and maintain software tools for SPHYNX. Design and implement
-                            scalable software architectures for complex systems. Collaborate with cross-functional teams
-                            to gather requirements and define technical specifications. Resolve technical issues and
-                            perform debugging and troubleshooting.
+                        <span class="timeline-date">2019 — Apr 2021</span>
+                        <h4 class="h4 timeline-item-title" data-i18n="exp.4.title">Senior Software Engineer</h4>
+                        <p class="timeline-company">Sphynx Technology Solutions AG</p>
+                        <p class="timeline-text" data-i18n-html="exp.4.text">
+                            Designed and built scalable software architectures for complex systems.
+                            Worked with cross-functional teams on requirements, specs, and debugging.
                         </p>
-
                     </li>
+
                     <li class="timeline-item">
-
-                        <h4 class="h4 timeline-item-title">Software Engineer</h4>
-                        <h4 class="h4 timeline-item-title">Empelor GMBH</h4>
-                        <span>2016 — 2019</span>
-
-                        <p class="timeline-text">
-                            Performed research and development tasks for the EVOTION H2020 project.
+                        <span class="timeline-date">2016 — 2019</span>
+                        <h4 class="h4 timeline-item-title" data-i18n="exp.5.title">Software Engineer</h4>
+                        <p class="timeline-company">Empelor GmbH</p>
+                        <p class="timeline-text" data-i18n-html="exp.5.text">
+                            R&amp;D for the EVOTION H2020 project.
                         </p>
-
                     </li>
+
                     <li class="timeline-item">
-
-                        <h4 class="h4 timeline-item-title">Graduate Teaching Assistant</h4>
-                        <h4 class="h4 timeline-item-title">City, University of London</h4>
-                        <span>2018 — 2019</span>
-
-                        <p class="timeline-text">
-                            Courses: "Security Audit and Certification", "Systems Architecture".
+                        <span class="timeline-date">2018 — 2019</span>
+                        <h4 class="h4 timeline-item-title" data-i18n="exp.6.title">Graduate Teaching Assistant</h4>
+                        <p class="timeline-company">City, University of London</p>
+                        <p class="timeline-text" data-i18n-html="exp.6.text">
+                            Taught <em>Security Audit and Certification</em> and
+                            <em>Systems Architecture</em>.
                         </p>
-
                     </li>
+
                     <li class="timeline-item">
-
-                        <h4 class="h4 timeline-item-title">Research Assistant</h4>
-                        <h4 class="h4 timeline-item-title">City, University of London</h4>
-                        <span>2016 — 2019</span>
-
-                        <p class="timeline-text">
-                            Part of the Centre of Adaptive Computing Systems (CeNACS) team. Research and development
-                            tasks for multiple EU-funded projects, such as TOREADOR, and CyberSURE.
+                        <span class="timeline-date">2016 — 2019</span>
+                        <h4 class="h4 timeline-item-title" data-i18n="exp.7.title">Research Assistant</h4>
+                        <p class="timeline-company">City, University of London</p>
+                        <p class="timeline-text" data-i18n-html="exp.7.text">
+                            Centre for Adaptive Computing Systems (CeNACS). R&amp;D on EU-funded
+                            projects including TOREADOR and CyberSURE.
                         </p>
-
                     </li>
+
                     <li class="timeline-item">
-
-                        <h4 class="h4 timeline-item-title">Graduate Software Engineer</h4>
-                        <h4 class="h4 timeline-item-title">University General Hospital of Heraklion "PAGNI"</h4>
-                        <span>May 2016 - Oct 2016</span>
-
-                        <p class="timeline-text">
-                            Designed and implemented the official android application for the University General
-                            Hospital of Heraklion "PAGNI". (Availabe at:
-                            https://play.google.com/store/apps/details?id=com.mikesm.pagniapp)
+                        <span class="timeline-date">May 2016 — Oct 2016</span>
+                        <h4 class="h4 timeline-item-title" data-i18n="exp.8.title">Graduate Software Engineer</h4>
+                        <p class="timeline-company" data-i18n="exp.8.company">University General Hospital of Heraklion (PAGNI)</p>
+                        <p class="timeline-text" data-i18n-html="exp.8.text">
+                            Designed and built the official Android app for PAGNI.
                         </p>
-
                     </li>
+
                 </ol>
 
             </section>
-
 
         </article>
-        <!--
-          - #CONTACT
-        -->
-
 
     </div>
 
 </main>
 
 
-<!--
-  - custom js link
--->
-<script src="./assets/js/script.js"></script>
-
-<!--
-  - ionicon link
--->
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./assets/js/script.js" defer></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>
 
