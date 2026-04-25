@@ -43,7 +43,7 @@ const i18n = {
     'focus.4.text': "I've contributed to <strong>30+ EU-funded cybersecurity projects</strong>, many as technical coordinator — translating research outputs into production-ready systems.",
 
     'resume.eyebrow': 'Resume',
-    'resume.title': 'Ten years in cybersecurity —<br>research, engineering, and teaching.',
+    'resume.title': 'A career in cybersecurity —<br>research, engineering, and teaching.',
     'btn.download': 'Download CV',
     'btn.contact': 'Get in touch',
 
@@ -116,7 +116,7 @@ const i18n = {
     'focus.4.text': 'Έχω συνεισφέρει σε <strong>30+ ευρωπαϊκά έργα κυβερνοασφάλειας</strong>, πολλά ως τεχνικός συντονιστής — μετατρέποντας ερευνητικά αποτελέσματα σε συστήματα παραγωγής.',
 
     'resume.eyebrow': 'Βιογραφικό',
-    'resume.title': 'Δέκα χρόνια στην κυβερνοασφάλεια —<br>έρευνα, μηχανική και διδασκαλία.',
+    'resume.title': 'Μια καριέρα στην κυβερνοασφάλεια —<br>έρευνα, μηχανική και διδασκαλία.',
     'btn.download': 'Κατέβασμα CV',
     'btn.contact': 'Επικοινωνία',
 
